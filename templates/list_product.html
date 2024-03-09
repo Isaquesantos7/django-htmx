@@ -11,8 +11,8 @@
             <div class="row">
                 <div class="col">
                     <label for="name">Nome:</label>
-                    <input class="form-control" type="text" name="name" id="name">
-                    <br>
+                    <input class="form-control" type="text" name="name" id="name" hx-get="{% url 'check_product' %}" hx-trigger="keyup" hx-target="#output">
+                    <div id="output"></div>
                     <label for="name">Preço:</label>
                     <input class="form-control" type="number" name="preco" id="preco">
                     <br>
@@ -22,5 +22,6 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
     </body>
 </html>
