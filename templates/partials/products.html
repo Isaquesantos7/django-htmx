@@ -1,0 +1,9 @@
+<ul class="list-group" style="margin-top: 20px;">
+    {% if product %}
+        {% for prod in product %}
+            <li class="list-group-item">{{prod.name}}</li>
+        {% endfor %}
+    {% else %}
+        <p>Nenhum produto encontrado!</p>
+    {% endif %}
+</ul>
