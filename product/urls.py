@@ -7,4 +7,5 @@ urlpatterns = [
 
     # endpoints
     path('check/product/', check_product, name='check_product'),
+    path('save/product/', save_product, name='save_product'),
 ]
