@@ -1,7 +1,14 @@
 {% if product %}
     <ul class="list-group" style="margin-top: 20px;">
         {% for prod in product %}
-            <li class="list-group-item">{{prod.name}}</li>
+            <li class="list-group-item">
+                {{prod.name}}
+                <p style="cursor: pointer; float: right;" class="badge bg-danger"
+                    hx-delete="{% url 'delete_product' prod.index %}"
+                    hx-trigger="click"
+                    hx-target="#list-product"
+                >X</p>
+            </li>
         {% endfor %}
     </ul>
 {% else %}
