@@ -1,3 +1,7 @@
 from django.urls import path
 
-urlpatterns = []
+from .views import *
+
+urlpatterns = [
+    path('list/product/', list_product, name='list_products')
+]
