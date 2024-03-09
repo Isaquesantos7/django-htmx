@@ -7,5 +7,7 @@ def save_product(request):
     price = request.POST.get('price')
 
     Product.objects.create(name=name, price=price)
+    
+    product = Product.objects.all()
 
-    return render(request, 'partials/products.html', context={})
+    return render(request, 'partials/products.html', context={'product': product})
